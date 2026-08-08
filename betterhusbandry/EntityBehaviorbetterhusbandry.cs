@@ -149,20 +149,22 @@ namespace betterhusbandry
             return GameMath.Clamp(updated, cfg.Floor, cfg.Ceiling);
         }
 
-        static float ApplyAxis(float current, double lastActionHours, double nowHours, double hoursPerDay, ModifierConfig cfg)
+        float ApplyAxis(float current, double lastActionHours, double nowHours, double hoursPerDay, ModifierConfig cfg)
         {
             double hoursSinceAction = double.IsNegativeInfinity(lastActionHours)
                 ? double.PositiveInfinity
                 : nowHours - lastActionHours;
 
             double graceHours = cfg.GraceDays * hoursPerDay;
+            int generation = entity.WatchedAttributes.GetInt("generation", 0);
+            double decayHours = generation * hoursPerDay; // Effective generation is the number of days the animal can go without being interacted with before it starts to decay.
 
             float updated;
             if (hoursSinceAction <= hoursPerDay)
             {
                 updated = current + cfg.GrowthPerDay;
             }
-            else if (hoursSinceAction <= hoursPerDay + graceHours)
+            else if (hoursSinceAction <= hoursPerDay + graceHours || hoursSinceAction <= decayHours)
             {
                 // Within the configured grace window - hold steady.
                 updated = current;
@@ -172,6 +174,7 @@ namespace betterhusbandry
                 // Neglected beyond the grace window - decay. Can go negative,
                 // clamped at cfg.Floor.
                 updated = current - cfg.DecayPerDay;
+                RegisterInteract(nowHours); // Reset the last-interacted timestamp so we don't keep decaying every day after this.
             }
 
             return GameMath.Clamp(updated, cfg.Floor, cfg.Ceiling);
