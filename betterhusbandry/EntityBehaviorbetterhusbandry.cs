@@ -71,8 +71,8 @@ namespace betterhusbandry
         /// </summary>
         public int Bloodline
         {
-            get => entity.WatchedAttributes.GetInt("bloodline", 0);
-            set => entity.WatchedAttributes.SetInt("bloodline", value);
+            get => Tree.GetInt("bloodline", 0);
+            set => Tree.SetInt("bloodline", value);
         }
 
         public EntityBehaviorbetterhusbandry(Entity entity) : base(entity) { }

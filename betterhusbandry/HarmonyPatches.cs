@@ -68,5 +68,38 @@ namespace betterhusbandry
                 behavior?.RegisterInteract(byEntity.World.Calendar.TotalHours);
             }
         }
+
+        [HarmonyPatch(typeof(EntityBehaviorMultiply), "GiveBirth")]
+        public static class Patch_GiveBirth
+        {
+            // Static because GiveBirth reads mother's "generation" once, uses it for
+            // every child in its own loop, and calling code is effectively
+            // single-threaded on the main game loop - reentrancy isn't a practical
+            // concern here, but flagging it in case that assumption ever changes.
+            static int savedGeneration;
+
+            [HarmonyPrefix]
+            public static void Prefix(Entity ___entity)
+            {
+                var motherBehavior = ___entity.GetBehavior<EntityBehaviorbetterhusbandry>();
+                if (motherBehavior == null) return;
+
+                savedGeneration = ___entity.WatchedAttributes.GetInt("generation", 0);
+
+                // Temporarily present Bloodline (not the live, care-affected
+                // generation) as "generation", so GiveBirth stamps bloodline+1 onto
+                // each newborn - EntityBehaviorbetterhusbandry.Initialize already
+                // reads that value correctly, no change needed there.
+                ___entity.WatchedAttributes.SetInt("generation", motherBehavior.Bloodline);
+            }
+
+            [HarmonyPostfix]
+            public static void Postfix(Entity ___entity)
+            {
+                if (___entity.GetBehavior<EntityBehaviorbetterhusbandry>() == null) return;
+
+                ___entity.WatchedAttributes.SetInt("generation", savedGeneration);
+            }
+        }
     }
 }
