@@ -157,14 +157,14 @@ namespace betterhusbandry
 
             double graceHours = cfg.GraceDays * hoursPerDay;
             int generation = entity.WatchedAttributes.GetInt("generation", 0);
-            double decayHours = generation * hoursPerDay; // Effective generation is the number of days the animal can go without being interacted with before it starts to decay.
+            double decayHours = generation * hoursPerDay * cfg.generationDecayMultiplier; // Effective generation is the number of days the animal can go without being interacted with before it starts to decay.
 
             float updated;
             if (hoursSinceAction <= hoursPerDay)
             {
                 updated = current + cfg.GrowthPerDay;
             }
-            else if (hoursSinceAction <= hoursPerDay + graceHours || hoursSinceAction <= decayHours)
+            else if (hoursSinceAction <= hoursPerDay + graceHours + decayHours)
             {
                 // Within the configured grace window - hold steady.
                 updated = current;

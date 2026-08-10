@@ -24,6 +24,12 @@ namespace betterhusbandry
         public float GraceDays = 0f;
 
         /// <summary>
+        /// Multiplier for how many in-game days of grace the animal gets per
+        /// generation. For example, if this is 0.5 and the animal is generation 2, it will have 1 extra day of grace before decay starts.
+        /// </summary
+        public float generationDecayMultiplier = 0.5f;
+
+        /// <summary>
         /// Clamps this config to sane hard bounds so a bad manual edit can't
         /// produce broken or crash-prone behavior. Called after every load
         /// and every reload, never trust the file blindly.
