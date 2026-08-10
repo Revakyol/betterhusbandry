@@ -203,14 +203,14 @@ namespace betterhusbandry
         }
 
         /// <summary>
-        /// effective = clamp(bloodline + feedMod + interactMod, 0, 10).
-        /// The 0-10 bound is intentionally hardcoded, not configurable -
+        /// effective = clamp(bloodline + feedMod + interactMod, 0).
+        /// The 0 lower bound is intentionally hardcoded, not configurable -
         /// vanilla behavior tables (milking rejection %, aggression/flee
         /// thresholds) are built around that range.
         /// </summary>
         public void RecomputeEffectiveGeneration()
         {
-            int effective = (int)GameMath.Clamp(Bloodline + FeedMod + InteractMod, 0, 10);
+            int effective = (int)GameMath.Max(Bloodline + FeedMod + InteractMod, 0);
             entity.WatchedAttributes.SetInt("generation", effective);
         }
     }
