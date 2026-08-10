@@ -3,6 +3,7 @@ using HarmonyLib;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Client;
 
 namespace betterhusbandry
 {
@@ -17,9 +18,18 @@ namespace betterhusbandry
         ICoreServerAPI sapi= null!;
         Harmony harmony = null!;
 
+        IServerNetworkChannel? serverChannel;
+        IClientNetworkChannel? clientChannel;
+
         long dailyCareListenerId = -1;
 
         float lastKnownCalendarSpeedMul = -1f;
+
+        public float ClientInteractFloor {get; private set;} = -3f;
+        public float ClientInteractCeiling {get; private set;} = 3f;
+
+        public float ClientFeedFloor {get; private set;} = -3f;
+        public float ClientFeedCeiling {get; private set;} = 3f;
 
         public betterhusbandryConfig? Config { get; private set; }
 
@@ -27,6 +37,8 @@ namespace betterhusbandry
         {
             base.Start(api);
             api.RegisterEntityBehaviorClass("betterhusbandry", typeof(EntityBehaviorbetterhusbandry));
+            api.Network.RegisterChannel("betterhusbandry")
+                .RegisterMessageType(typeof(CapsPacket));
         }
 
         public override void StartServerSide(ICoreServerAPI api)
@@ -35,12 +47,56 @@ namespace betterhusbandry
 
             LoadConfig();
 
+            serverChannel = api.Network.GetChannel("betterhusbandry");
+            api.Event.PlayerJoin += OnPlayerJoin;
+
             api.Event.RegisterGameTickListener(OnConfigReloadTick, (int)(ConfigReloadIntervalSeconds * 1000));
 
             RegisterDailyCareTickListener();
 
             harmony = new Harmony("betterhusbandry");
             harmony.PatchAll();
+        }
+
+        public override void StartClientSide(ICoreClientAPI api)
+        {
+            clientChannel = api.Network.GetChannel("betterhusbandry");
+            clientChannel.SetMessageHandler<CapsPacket>(OnCapsReceived);
+        }
+
+        void OnCapsReceived(CapsPacket packet)
+        {
+            ClientInteractFloor = packet.InteractFloor;
+            ClientInteractCeiling = packet.InteractCeiling;
+            ClientFeedFloor = packet.FeedFloor;
+            ClientFeedCeiling = packet.FeedCeiling;
+        }
+
+        void OnPlayerJoin(IServerPlayer player)
+        {
+            BroadcastCaps(player);
+        }
+
+        void BroadcastCaps(IServerPlayer? onlyTo = null)
+        {
+            if (serverChannel == null || Config == null) return;
+
+            var packet = new CapsPacket
+            {
+                InteractFloor = Config.InteractMod.Floor,
+                InteractCeiling = Config.InteractMod.Ceiling,
+                FeedFloor = Config.FeedMod.Floor,
+                FeedCeiling = Config.FeedMod.Ceiling
+            };
+
+            if (onlyTo != null)
+            {
+                serverChannel?.SendPacket(packet, onlyTo);
+            }
+            else
+            {
+                serverChannel?.BroadcastPacket(packet);
+            }
         }
 
         void LoadConfig()
@@ -84,6 +140,7 @@ namespace betterhusbandry
         void OnConfigReloadTick(float dt)
         {
             LoadConfig();
+            BroadcastCaps();
 
             if (sapi.World.Calendar.CalendarSpeedMul != lastKnownCalendarSpeedMul)
             {

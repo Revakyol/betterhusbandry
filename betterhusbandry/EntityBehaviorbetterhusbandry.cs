@@ -81,19 +81,41 @@ namespace betterhusbandry
 
         public override void GetInfoText(StringBuilder infotext)
         {
-            entity.World.Logger.Notification("[betterhusbandry] GetInfoText reached for entity {0}", entity.Code);
+            var modSystem = entity.Api.ModLoader.GetModSystem<betterhusbandryModSystem>();
+            float feedFloor = modSystem?.ClientFeedFloor ?? 0f;
+            float feedCeiling = modSystem?.ClientFeedCeiling ?? 0f;
+            float interactFloor = modSystem?.ClientInteractFloor ?? 0f;
+            float interactCeiling = modSystem?.ClientInteractCeiling ?? 0f;
             double hoursSinceInteract = double.IsNegativeInfinity(LastInteractedHours)
                 ? double.PositiveInfinity
                 : entity.World.Calendar.TotalHours - LastInteractedHours;
             double hoursPerDay = entity.World.Calendar.HoursPerDay;
 
-            infotext.AppendLine($"Bloodline : {Bloodline}");
-            infotext.AppendLine($"FeedMod : {FeedMod:0.00}");
-            infotext.AppendLine($"InteractMod : {InteractMod:0.00}");
-            infotext.AppendLine($"Effective Generation : {(int)GameMath.Clamp(Bloodline + FeedMod + InteractMod, 0, 10)}");
+            infotext.AppendLine($"Bloodline Generation: {Bloodline}");
+            infotext.AppendLine(
+                InteractMod == interactCeiling
+                ? "The animal trusts you completely"
+                : InteractMod/interactCeiling >= 0.75
+                    ? "The animal trusts you"
+                    : InteractMod/interactCeiling >= 0.5
+                        ? "The animal is beginning to trust you"
+                        : InteractMod/interactCeiling >= 0.25
+                            ? "The animal is cautious around you"
+                            : InteractMod/interactCeiling > 0
+                                ? "The animal is neutral to you"
+                                : InteractMod/interactCeiling >= -0.25
+                                    ? "The animal is wary of you"
+                                    : InteractMod/interactCeiling >= -0.5
+                                        ? "The animal is avoiding you"
+                                        : InteractMod/interactCeiling >= -0.75
+                                            ? "The animal is beginning to fear you"
+                                            : InteractMod == interactFloor
+                                                ? "The animal is terrified of you"
+                                                : "The animal is afraid of you"
+            );
             infotext.AppendLine(hoursSinceInteract <= hoursPerDay
                 ? $"Last interacted {hoursSinceInteract:0.0} hours ago"
-                : "Last interacted more than 24 hours ago");
+                : "Last interacted more than one day ago");
 
             base.GetInfoText(infotext);
         }

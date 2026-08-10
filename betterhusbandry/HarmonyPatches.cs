@@ -4,6 +4,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.GameContent;
 using Vintagestory.API.MathTools;
+using ProtoBuf;
 
 namespace betterhusbandry
 {
@@ -101,5 +102,13 @@ namespace betterhusbandry
                 ___entity.WatchedAttributes.SetInt("generation", savedGeneration);
             }
         }
+    }
+    [ProtoContract]
+    public class CapsPacket
+    {
+        [ProtoMember(1)] public float InteractFloor;
+        [ProtoMember(2)] public float InteractCeiling;
+        [ProtoMember(3)] public float FeedFloor;
+        [ProtoMember(4)] public float FeedCeiling;
     }
 }
