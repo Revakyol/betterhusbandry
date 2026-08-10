@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="betterhusbandry/betterhusbandry.csproj" />
+  <Project Path="CakeBuild/CakeBuild.csproj" />
+</Solution>
