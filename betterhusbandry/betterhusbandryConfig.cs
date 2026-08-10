@@ -15,13 +15,13 @@ namespace betterhusbandry
         public float Ceiling = 3f;
 
         /// <summary>Modifier gained per in-game day with a qualifying action.</summary>
-        public float GrowthPerDay = 0.25f;
+        public float GrowthPerDay = 0.03f;
 
         /// <summary>Modifier lost per in-game day without a qualifying action (after GraceDays).</summary>
-        public float DecayPerDay = 0.25f;
+        public float DecayPerDay = 0.2f;
 
         /// <summary>In-game days after the last qualifying action before decay starts.</summary>
-        public float GraceDays = 0f;
+        public float GraceDays = 1f;
 
         /// <summary>
         /// Multiplier for how many in-game days of grace the animal gets per
