@@ -1,0 +1,16 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "cervinae:entities/land/cervini",
+    "dependsOn": [{"modid":"cervinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "cervinae:entities/land/cervini",
+    "dependsOn": [{"modid":"cervinae"}]
+  }
+]
