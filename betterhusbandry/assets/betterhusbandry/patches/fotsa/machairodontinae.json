@@ -1,0 +1,30 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "machairodontinae:entities/animal/mammal/machairodontinae-adult",
+    "dependsOn": [{"modid":"machairodontinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "machairodontinae:entities/animal/mammal/machairodontinae-adult",
+    "dependsOn": [{"modid":"machairodontinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "machairodontinae:entities/animal/mammal/machairodontinae-baby",
+    "dependsOn": [{"modid":"machairodontinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "machairodontinae:entities/animal/mammal/machairodontinae-baby",
+    "dependsOn": [{"modid":"machairodontinae"}]
+  }
+]
