@@ -1,0 +1,114 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/anatidae-adult",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/anatidae-adult",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/anatidae-baby",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/anatidae-baby",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/casuariidae-adult",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/casuariidae-adult",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/casuariidae-baby",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/casuariidae-baby",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/dromornithidae-adult",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/dromornithidae-adult",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/dromornithidae-baby",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/dromornithidae-baby",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/rallidae-adult",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/rallidae-adult",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/rallidae-baby",
+    "dependsOn": [{"modid":"casuariidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "casuariidae:entities/animal/bird/rallidae-baby",
+    "dependsOn": [{"modid":"casuariidae"}]
+  }
+]
