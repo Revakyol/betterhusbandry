@@ -1,0 +1,58 @@
+[
+  {  
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "draconis:entities/alpini/dragon",
+    "dependsOn": [{"modid":"draconis"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "draconis:entities/alpini/dragon",
+    "dependsOn": [{"modid":"draconis"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "draconis:entities/weaver/dragon",
+    "dependsOn": [{"modid":"draconis"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "draconis:entities/weaver/dragon",
+    "dependsOn": [{"modid":"draconis"}]
+  },
+  {  
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "draconis:entities/autumnus/wyvern",
+    "dependsOn": [{"modid":"draconis"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "draconis:entities/autumnus/wyvern",
+    "dependsOn": [{"modid":"draconis"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "draconis:entities/cuprocaudus/drake",
+    "dependsOn": [{"modid":"draconis"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "draconis:entities/cuprocaudus/drake",
+    "dependsOn": [{"modid":"draconis"}]
+  }
+]
