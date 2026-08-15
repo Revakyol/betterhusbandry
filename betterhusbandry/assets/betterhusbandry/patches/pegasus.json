@@ -1,0 +1,44 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pegasus:entities/feralpegasus",
+    "dependsOn": [{"modid":"pegasus"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pegasus:entities/feralpegasus",
+    "dependsOn": [{"modid":"pegasus"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pegasus:entities/pegasus",
+    "dependsOn": [{"modid":"pegasus"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pegasus:entities/pegasus",
+    "dependsOn": [{"modid":"pegasus"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pegasus:entities/wildpegasus",
+    "dependsOn": [{"modid":"pegasus"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pegasus:entities/wildpegasus",
+    "dependsOn": [{"modid":"pegasus"}]
+  }
+]
