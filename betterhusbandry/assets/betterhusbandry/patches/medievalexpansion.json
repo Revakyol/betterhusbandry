@@ -1,0 +1,86 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-female.json",
+    "dependsOn": [{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-female.json",
+    "dependsOn": [{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-male.json",
+    "dependsOn": [{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-male.json",
+    "dependsOn": [{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-lamb.json",
+    "dependsOn": [{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-lamb.json",
+    "dependsOn": [{"modid":"medievalexpansion"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-female.json",
+    "dependsOn": [{"modid":"medievalexpansionpatch"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-female.json",
+    "dependsOn": [{"modid":"medievalexpansionpatch"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-male.json",
+    "dependsOn": [{"modid":"medievalexpansionpatch"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-male.json",
+    "dependsOn": [{"modid":"medievalexpansionpatch"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-lamb.json",
+    "dependsOn": [{"modid":"medievalexpansionpatch"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "medievalexpansion:entities/land/aurochs-lamb.json",
+    "dependsOn": [{"modid":"medievalexpansionpatch"}]
+  }
+]
