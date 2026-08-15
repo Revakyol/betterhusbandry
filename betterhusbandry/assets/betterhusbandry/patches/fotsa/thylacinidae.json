@@ -1,0 +1,30 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "thylacinidae:entities/land/dasyuridae-adult",
+    "dependsOn": [{"modid":"thylacinidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "thylacinidae:entities/land/dasyuridae-adult",
+    "dependsOn": [{"modid":"thylacinidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "thylacinidae:entities/land/dasyuridae-baby",
+    "dependsOn": [{"modid":"thylacinidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "thylacinidae:entities/land/dasyuridae-baby",
+    "dependsOn": [{"modid":"thylacinidae"}]
+  }
+]
