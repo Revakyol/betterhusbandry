@@ -1,0 +1,254 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/bison",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/bison",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/bison-calf",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/bison-calf",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/cockatrice",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/cockatrice",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/cockatrice-chick",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/cockatrice-chick",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/direwolf",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/direwolf",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/direwolf-pup",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/direwolf-pup",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/hellboar",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/hellboar",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/hellboar-piglet",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/hellboar-piglet",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/horse",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/horse",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/foal",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/foal",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/ostrich",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/ostrich",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/ostrich-chick",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/ostrich-chick",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-cockatrice",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-cockatrice",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-cockatrice-chick",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-cockatrice-chick",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-direwolf",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-direwolf",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-direwolf-pup",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-direwolf-pup",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-ostrich",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-ostrich",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-ostrich-chick",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "feverstonewilds:entities/land/tame-ostrich-chick",
+    "dependsOn": [{"modid":"feverstonewilds"}]
+  }
+]
