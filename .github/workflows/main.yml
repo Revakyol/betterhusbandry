@@ -35,6 +35,9 @@ on:
 env:
   VS_VERSION: "1.22.6"   # pin to whatever version you're targeting
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -83,3 +86,13 @@ jobs:
             **/Releases/*.zip
             bin/**/*.dll
           if-no-files-found: warn
+
+      - name: Upload tag release asset
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            Releases/*.zip
+          fail_on_unmatched_files: true
+          generate_release_notes: true
+      
