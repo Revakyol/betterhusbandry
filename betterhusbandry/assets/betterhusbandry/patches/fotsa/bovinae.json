@@ -1,0 +1,44 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "bovinae:entities/animal/mammal/hooved/bovinae-adult",
+    "dependsOn": [{"modid":"bovinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "bovinae:entities/animal/mammal/hooved/bovinae-adult",
+    "dependsOn": [{"modid":"bovinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "bovinae:entities/animal/mammal/hooved/bovinae-baby",
+    "dependsOn": [{"modid":"bovinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "bovinae:entities/animal/mammal/hooved/bovinae-baby",
+    "dependsOn": [{"modid":"bovinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "bovinae:entities/animal/mammal/hooved/bovinae-tamed",
+    "dependsOn": [{"modid":"bovinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "bovinae:entities/animal/mammal/hooved/bovinae-tamed",
+    "dependsOn": [{"modid":"bovinae"}]
+  }
+]
