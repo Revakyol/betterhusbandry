@@ -1,0 +1,44 @@
+[
+  {  
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equusferus:entities/ferus/ferus",
+    "dependsOn": [{"modid":"equusferus"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equusferus:entities/ferus/ferus",
+    "dependsOn": [{"modid":"equusferus"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equusferus:entities/ferus/ferus-unhandled",
+    "dependsOn": [{"modid":"equusferus"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equusferus:entities/ferus/ferus-unhandled",
+    "dependsOn": [{"modid":"equusferus"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equusferus:entities/ferus/ferus-wild",
+    "dependsOn": [{"modid":"equusferus"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equusferus:entities/ferus/ferus-wild",
+    "dependsOn": [{"modid":"equusferus"}]
+  }
+]
