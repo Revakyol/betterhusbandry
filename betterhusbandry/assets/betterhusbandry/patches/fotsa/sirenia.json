@@ -1,0 +1,30 @@
+[
+    {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "sirenia:entities/animal/mammal/sirenia-adult",
+    "dependsOn": [{"modid":"sirenia"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "sirenia:entities/animal/mammal/sirenia-adult",
+    "dependsOn": [{"modid":"sirenia"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "sirenia:entities/animal/mammal/sirenia-baby",
+    "dependsOn": [{"modid":"sirenia"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "sirenia:entities/animal/mammal/sirenia-baby",
+    "dependsOn": [{"modid":"sirenia"}]
+  }
+]
