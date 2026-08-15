@@ -1,0 +1,30 @@
+[
+  {  
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equusdestrier:entities/destrier/destrier",
+    "dependsOn": [{"modid":"equusdestrier"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equusdestrier:entities/destrier/destrier",
+    "dependsOn": [{"modid":"equusdestrier"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equusdestrier:entities/destrier/destrier-unhandled",
+    "dependsOn": [{"modid":"equusdestrier"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equusdestrier:entities/destrier/destrier-unhandled",
+    "dependsOn": [{"modid":"equusdestrier"}]
+  }
+]
