@@ -1,0 +1,16 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "manidae:entities/land/manidae",
+    "dependsOn": [{"modid":"manidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "manidae:entities/land/manidae",
+    "dependsOn": [{"modid":"manidae"}]
+  }
+]
