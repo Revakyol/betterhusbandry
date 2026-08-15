@@ -1,0 +1,16 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "rhinocerotidae:entities/land/rhinocerotidae",
+    "dependsOn": [{"modid":"rhinocerotidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "rhinocerotidae:entities/land/rhinocerotidae",
+    "dependsOn": [{"modid":"rhinocerotidae"}]
+  }
+]
