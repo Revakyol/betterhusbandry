@@ -1,0 +1,30 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "monoceros:entities/feralmonoceros",
+    "dependsOn": [{"modid":"monoceros"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "monoceros:entities/feralmonoceros",
+    "dependsOn": [{"modid":"monoceros"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "monoceros:entities/tamedmonoceros",
+    "dependsOn": [{"modid":"monoceros"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "monoceros:entities/tamedmonoceros",
+    "dependsOn": [{"modid":"monoceros"}]
+  }
+]
