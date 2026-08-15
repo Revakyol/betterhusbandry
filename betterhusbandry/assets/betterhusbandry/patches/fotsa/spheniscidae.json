@@ -1,0 +1,16 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "spheniscidae:entities/land/spheniscidae",
+    "dependsOn": [{"modid":"spheniscidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "spheniscidae:entities/land/spheniscidae",
+    "dependsOn": [{"modid":"spheniscidae"}]
+  }
+]
