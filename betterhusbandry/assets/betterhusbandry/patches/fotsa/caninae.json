@@ -1,0 +1,128 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/canina-adult",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/canina-adult",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/canina-baby",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/canina-baby",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/canina-semitamed",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/canina-semitamed",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/cerdocyonina-adult",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/cerdocyonina-adult",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/cerdocyonina-baby",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/cerdocyonina-baby",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/urocyonini-adult",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/urocyonini-adult",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/urocyonini-baby",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/urocyonini-baby",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/vulpini-adult",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/vulpini-adult",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/vulpini-baby",
+    "dependsOn": [{"modid":"caninae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "caninae:entities/animal/mammal/vulpini-baby",
+    "dependsOn": [{"modid":"caninae"}]
+  }
+]
