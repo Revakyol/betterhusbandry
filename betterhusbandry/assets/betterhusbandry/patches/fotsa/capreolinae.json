@@ -1,0 +1,114 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/alceini-adult",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/alceini-adult",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/alceini-baby",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/alceini-baby",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/alceini-tamed",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/alceini-tamed",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/capreolini-adult",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/capreolini-adult",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/capreolini-baby",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/capreolini-baby",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/odocoileini-adult",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/odocoileini-adult",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/odocoileini-baby",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/odocoileini-baby",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/odocoileini-tamed",
+    "dependsOn": [{"modid":"capreolinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "capreolinae:entities/animal/mammal/hooved/odocoileini-tamed",
+    "dependsOn": [{"modid":"capreolinae"}]
+  }
+]
