@@ -1,0 +1,16 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "felinae:entities/land/felinae",
+    "dependsOn": [{"modid":"felinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "felinae:entities/land/felinae",
+    "dependsOn": [{"modid":"felinae"}]
+  }
+]
