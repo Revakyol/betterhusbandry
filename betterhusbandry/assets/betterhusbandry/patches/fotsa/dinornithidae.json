@@ -1,0 +1,142 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/acanthisittidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/acanthisittidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/aegothelidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/aegothelidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/anatidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/anatidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/apterygidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/apterygidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/aptornithidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/aptornithidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/dinornithidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/dinornithidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/emeidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/emeidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/megalapterygidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/megalapterygidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/rallidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/rallidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/strigopidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/land/strigopidae",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  }
+]
