@@ -1,0 +1,30 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "chelonioidea:entities/water/chelonioidea-adult",
+    "dependsOn": [{"modid":"chelonioidea"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "chelonioidea:entities/water/chelonioidea-adult",
+    "dependsOn": [{"modid":"chelonioidea"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "chelonioidea:entities/water/chelonioidea-baby",
+    "dependsOn": [{"modid":"chelonioidea"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "chelonioidea:entities/water/chelonioidea-baby",
+    "dependsOn": [{"modid":"chelonioidea"}]
+  }
+]
