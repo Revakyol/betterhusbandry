@@ -1,0 +1,58 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pantherinae:entities/animal/mammal/pantherinae-neofelis-adult",
+    "dependsOn": [{"modid":"pantherinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pantherinae:entities/animal/mammal/pantherinae-neofelis-adult",
+    "dependsOn": [{"modid":"pantherinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pantherinae:entities/animal/mammal/pantherinae-neofelis-baby",
+    "dependsOn": [{"modid":"pantherinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pantherinae:entities/animal/mammal/pantherinae-neofelis-baby",
+    "dependsOn": [{"modid":"pantherinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pantherinae:entities/animal/mammal/pantherinae-panthera-adult",
+    "dependsOn": [{"modid":"pantherinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pantherinae:entities/animal/mammal/pantherinae-panthera-adult",
+    "dependsOn": [{"modid":"pantherinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pantherinae:entities/animal/mammal/pantherinae-panthera-baby",
+    "dependsOn": [{"modid":"pantherinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "pantherinae:entities/animal/mammal/pantherinae-panthera-baby",
+    "dependsOn": [{"modid":"pantherinae"}]
+  }
+]
