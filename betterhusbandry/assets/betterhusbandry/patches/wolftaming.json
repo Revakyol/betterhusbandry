@@ -1,0 +1,30 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "wolftaming:entities/land/dog-adult",
+    "dependsOn": [{"modid":"wolftaming"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "wolftaming:entities/land/dog-adult",
+    "dependsOn": [{"modid":"wolftaming"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "wolftaming:entities/land/dog-pup",
+    "dependsOn": [{"modid":"wolftaming"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "wolftaming:entities/land/dog-pup",
+    "dependsOn": [{"modid":"wolftaming"}]
+  }
+]
