@@ -1,0 +1,44 @@
+[
+  {  
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equus:entities/feralwildhorse",
+    "dependsOn": [{"modid":"equus"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equus:entities/feralwildhorse",
+    "dependsOn": [{"modid":"equus"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equus:entities/tamedwildhorse",
+    "dependsOn": [{"modid":"equus"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equus:entities/tamedwildhorse",
+    "dependsOn": [{"modid":"equus"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equus:entities/wildwildhorse",
+    "dependsOn": [{"modid":"equus"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "equus:entities/wildwildhorse",
+    "dependsOn": [{"modid":"equus"}]
+  }
+]
