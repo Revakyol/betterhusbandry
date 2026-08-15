@@ -1,0 +1,30 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "viverridae:entities/land/nandiniidae",
+    "dependsOn": [{"modid":"viverridae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "viverridae:entities/land/nandiniidae",
+    "dependsOn": [{"modid":"viverridae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "viverridae:entities/land/viverridae",
+    "dependsOn": [{"modid":"viverridae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "viverridae:entities/land/viverridae",
+    "dependsOn": [{"modid":"viverridae"}]
+  }
+]
