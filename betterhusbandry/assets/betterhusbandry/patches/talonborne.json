@@ -1,0 +1,30 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "talonborne:entities/mount/hippogryph",
+    "dependsOn": [{"modid":"talonborne"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "talonborne:entities/mount/hippogryph",
+    "dependsOn": [{"modid":"talonborne"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "talonborne:entities/mount/hippogryphyoung",
+    "dependsOn": [{"modid":"talonborne"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "talonborne:entities/mount/hippogryphyoung",
+    "dependsOn": [{"modid":"talonborne"}]
+  }
+]
