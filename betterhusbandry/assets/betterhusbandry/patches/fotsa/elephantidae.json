@@ -1,0 +1,16 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "elephantidae:entities/land/elephantidae",
+    "dependsOn": [{"modid":"elephantidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "elephantidae:entities/land/elephantidae",
+    "dependsOn": [{"modid":"elephantidae"}]
+  }
+]
