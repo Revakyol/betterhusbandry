@@ -1,0 +1,30 @@
+[
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "iniidae:entities/water/iniidae-adult",
+    "dependsOn": [{"modid":"iniidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "iniidae:entities/water/iniidae-adult",
+    "dependsOn": [{"modid":"iniidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "iniidae:entities/water/iniidae-baby",
+    "dependsOn": [{"modid":"iniidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "iniidae:entities/water/iniidae-baby",
+    "dependsOn": [{"modid":"iniidae"}]
+  }
+]
