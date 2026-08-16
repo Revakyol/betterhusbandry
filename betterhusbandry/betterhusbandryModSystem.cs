@@ -1,9 +1,11 @@
 using System;
+using System.Linq;
 using HarmonyLib;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Client;
+using ConfigLib;
 
 namespace betterhusbandry
 {
@@ -39,6 +41,28 @@ namespace betterhusbandry
             api.RegisterEntityBehaviorClass("betterhusbandry", typeof(EntityBehaviorbetterhusbandry));
             api.Network.RegisterChannel("betterhusbandry")
                 .RegisterMessageType(typeof(CapsPacket));
+            if(api.ModLoader.IsModEnabled("configLib"))
+            {
+                SubscribeToConfigChange(api);
+            }
+        }
+
+        private void SubscribeToConfigChange(ICoreAPI api)
+        {
+            if (Config == null) return;
+            var configLib = api.ModLoader.GetModSystem<ConfigLibModSystem>();
+            if(configLib != null)
+            {
+                configLib.SettingChanged += (domain, config, setting) =>
+                {
+                    if(domain != "betterhusbandry") return;
+                    setting.AssignSettingValue(Config);
+                };
+                configLib.ConfigsLoaded += () =>
+                {
+                    configLib.GetConfig("betterhusbandry")?.AssignSettingsValues(Config);
+                };
+            }
         }
 
         public override void StartServerSide(ICoreServerAPI api)
@@ -150,6 +174,7 @@ namespace betterhusbandry
 
         void OnDailyCareTick(float dt)
         {
+            if (Config == null) return;
             double nowHours = sapi.World.Calendar.TotalHours;
 
             foreach (var entity in sapi.World.LoadedEntities.Values)

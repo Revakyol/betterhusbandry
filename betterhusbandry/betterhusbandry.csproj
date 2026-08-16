@@ -40,6 +40,10 @@
       <HintPath>$(VINTAGE_STORY)/VintagestoryLib.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="configlib">
+      <HintPath>../configlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
 
 <ItemGroup>

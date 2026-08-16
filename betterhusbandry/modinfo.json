@@ -6,8 +6,8 @@
     "authors": [
         "Tyeia"
     ],
-    "description": "To be added",
-    "version": "1.1.0",
+    "description": "Changes animal husbandry by rewarding players for petting and feeding their animals.",
+    "version": "1.2.0",
     "dependencies": {
         "game": "1.22.0"
     }
