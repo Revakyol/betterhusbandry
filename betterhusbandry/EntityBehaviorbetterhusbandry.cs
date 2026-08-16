@@ -98,27 +98,30 @@ namespace betterhusbandry
             double hoursPerDay = entity.World.Calendar.HoursPerDay;
 
             infotext.AppendLine($"Bloodline Generation: {Bloodline}");
-            infotext.AppendLine(
-                InteractMod == interactCeiling
-                ? "The animal trusts you completely"
-                : InteractMod/interactCeiling >= 0.75
-                    ? "The animal trusts you"
-                    : InteractMod/interactCeiling >= 0.5
-                        ? "The animal is beginning to trust you"
-                        : InteractMod/interactCeiling >= 0.25
-                            ? "The animal is cautious around you"
-                            : InteractMod/interactCeiling > 0
-                                ? "The animal is neutral to you"
-                                : InteractMod/interactCeiling >= -0.25
-                                    ? "The animal is wary of you"
-                                    : InteractMod/interactCeiling >= -0.5
-                                        ? "The animal is avoiding you"
-                                        : InteractMod/interactCeiling >= -0.75
-                                            ? "The animal is beginning to fear you"
-                                            : InteractMod == interactFloor
-                                                ? "The animal is terrified of you"
-                                                : "The animal is afraid of you"
-            );
+            if(interactCeiling != 0)
+            {
+                infotext.AppendLine(
+                    InteractMod == interactCeiling
+                    ? "The animal trusts you completely"
+                    : InteractMod/interactCeiling >= 0.75
+                        ? "The animal trusts you"
+                        : InteractMod/interactCeiling >= 0.5
+                            ? "The animal is beginning to trust you"
+                            : InteractMod/interactCeiling >= 0.25
+                                ? "The animal is cautious around you"
+                                : InteractMod/interactCeiling > 0
+                                    ? "The animal is neutral to you"
+                                    : InteractMod/interactCeiling >= -0.25
+                                        ? "The animal is wary of you"
+                                        : InteractMod/interactCeiling >= -0.5
+                                            ? "The animal is avoiding you"
+                                            : InteractMod/interactCeiling >= -0.75
+                                                ? "The animal is beginning to fear you"
+                                                : InteractMod == interactFloor
+                                                    ? "The animal is terrified of you"
+                                                    : "The animal is afraid of you"
+                );
+            }
             infotext.AppendLine(hoursSinceInteract <= hoursPerDay
                 ? $"Last interacted {hoursSinceInteract:0.0} hours ago"
                 : "Last interacted more than one day ago");
@@ -148,7 +151,7 @@ namespace betterhusbandry
             entity.WatchedAttributes.MarkPathDirty(RootKey);
         }
 
-        /// <summary>Call whenever the player successfully milks or pets the animal.</summary>
+        /// <summary>Call whenever the animal's Interaction modifier decays.</summary>
         public void RegisterDecay(double nowHours)
         {
             LastDecayHours = nowHours;
