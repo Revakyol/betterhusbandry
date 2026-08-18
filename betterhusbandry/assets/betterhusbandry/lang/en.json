@@ -4,8 +4,6 @@
     "setting-feed-ceiling": "Feed Modifier Upper Limit",
     "setting-feed-growth-per-day": "Feed Modifier Growth per day (if conditions are met)",
     "setting-feed-decay-per-day": "Feed Modifier Decay per day (if conditions are not met)",
-    "setting-feed-grace-days": "Amount of days after feeding before decay begins (unused)",
-    "setting-feed-generation-decay-multiplier": "Multiplier to multiply generation by to determine how often decay is checked (unused)",
     "setting-feed-good-weight-threshold": "Good Weight threshold (Feed modifier will grow)",
     "setting-feed-ok-weight-threshold": "Ok Weight threshold (Feed modifier will stay the same)",
 

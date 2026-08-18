@@ -1,9 +1,10 @@
 {
   "version": 1,
+  "file": "betterhusbandry.json",
   "settings": {
     "float": {
       "FeedMod.Floor": {
-        "name": "feed-floor",
+        "name": "feedFloor",
         "ingui": "betterhusbandry:setting-feed-floor",
         "weight": 1.0,
         "comment": "Lowest value the feed modifier can reach.",
@@ -15,7 +16,7 @@
         }
       },
       "FeedMod.Ceiling": {
-        "name": "feed-ceiling",
+        "name": "feedCeiling",
         "ingui": "betterhusbandry:setting-feed-ceiling",
         "weight": 1.1,
         "comment": "Highest value the feed modifier can reach.",
@@ -27,7 +28,7 @@
         }
       },
       "FeedMod.GrowthPerDay": {
-        "name": "feed-growth-per-day",
+        "name": "feedGrowthPerDay",
         "ingui": "betterhusbandry:setting-feed-growth-per-day",
         "weight": 1.2,
         "comment": "Feed modifier gained per in-game day with a qualifying feeding action.",
@@ -39,7 +40,7 @@
         }
       },
       "FeedMod.DecayPerDay": {
-        "name": "feed-decay-per-day",
+        "name": "feedDecayPerDay",
         "ingui": "betterhusbandry:setting-feed-decay-per-day",
         "weight": 1.3,
         "comment": "Feed modifier lost per in-game day without a qualifying action, after the grace period.",
@@ -50,32 +51,8 @@
           "step": 0.01
         }
       },
-      "FeedMod.GraceDays": {
-        "name": "feed-grace-days",
-        "ingui": "betterhusbandry:setting-feed-grace-days",
-        "weight": 1.4,
-        "comment": "In-game days after the last qualifying feed action before decay starts.",
-        "default": 1.0,
-        "range": {
-          "min": 0.0,
-          "max": 10.0,
-          "step": 0.1
-        }
-      },
-      "FeedMod.generationDecayMultiplier": {
-        "name": "feed-generation-decay-multiplier",
-        "ingui": "betterhusbandry:setting-feed-generation-decay-multiplier",
-        "weight": 1.5,
-        "comment": "Multiplier for extra grace days per animal generation.",
-        "default": 0.5,
-        "range": {
-          "min": 0.0,
-          "max": 5.0,
-          "step": 0.05
-        }
-      },
       "FeedMod.GoodWeightThreshold": {
-        "name": "feed-good-weight-threshold",
+        "name": "feedGoodWeightThreshold",
         "ingui": "betterhusbandry:setting-feed-good-weight-threshold",
         "weight": 1.6,
         "comment": "Weight fraction (0-1) at or above which the feed modifier is treated as 'good'.",
@@ -87,7 +64,7 @@
         }
       },
       "FeedMod.OkWeightThreshold": {
-        "name": "feed-ok-weight-threshold",
+        "name": "feedOkWeightThreshold",
         "ingui": "betterhusbandry:setting-feed-ok-weight-threshold",
         "weight": 1.7,
         "comment": "Weight fraction (0-1) at or above which the feed modifier is treated as 'ok'.",
@@ -99,7 +76,7 @@
         }
       },
       "InteractMod.Floor": {
-        "name": "interact-floor",
+        "name": "interactFloor",
         "ingui": "betterhusbandry:setting-interact-floor",
         "weight": 2.0,
         "comment": "Lowest value the interact modifier can reach.",
@@ -111,7 +88,7 @@
         }
       },
       "InteractMod.Ceiling": {
-        "name": "interact-ceiling",
+        "name": "interactCeiling",
         "ingui": "betterhusbandry:setting-interact-ceiling",
         "weight": 2.1,
         "comment": "Highest value the interact modifier can reach.",
@@ -123,7 +100,7 @@
         }
       },
       "InteractMod.GrowthPerDay": {
-        "name": "interact-growth-per-day",
+        "name": "interactGrowthPerDay",
         "ingui": "betterhusbandry:setting-interact-growth-per-day",
         "weight": 2.2,
         "comment": "Interact modifier gained per in-game day with a qualifying interaction.",
@@ -135,7 +112,7 @@
         }
       },
       "InteractMod.DecayPerDay": {
-        "name": "interact-decay-per-day",
+        "name": "interactDecayPerDay",
         "ingui": "betterhusbandry:setting-interact-decay-per-day",
         "weight": 2.3,
         "comment": "Interact modifier lost per in-game day without a qualifying action, after the grace period.",
@@ -147,7 +124,7 @@
         }
       },
       "InteractMod.GraceDays": {
-        "name": "interact-grace-days",
+        "name": "interactGraceDays",
         "ingui": "betterhusbandry:setting-interact-grace-days",
         "weight": 2.4,
         "comment": "In-game days after the last qualifying interaction before decay starts.",
@@ -159,7 +136,7 @@
         }
       },
       "InteractMod.generationDecayMultiplier": {
-        "name": "interact-generation-decay-multiplier",
+        "name": "interactgenerationDecayMultiplier",
         "ingui": "betterhusbandry:setting-interact-generation-decay-multiplier",
         "weight": 2.5,
         "comment": "Multiplier for extra grace days per animal generation.",

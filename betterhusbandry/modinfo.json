@@ -7,7 +7,7 @@
         "Tyeia"
     ],
     "description": "Changes animal husbandry by rewarding players for petting and feeding their animals.",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "dependencies": {
         "game": "1.22.0"
     }

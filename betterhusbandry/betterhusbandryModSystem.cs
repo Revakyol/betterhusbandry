@@ -7,6 +7,7 @@ using Vintagestory.API.MathTools;
 using Vintagestory.API.Client;
 using ConfigLib;
 
+
 namespace betterhusbandry
 {
     public class betterhusbandryModSystem : ModSystem
@@ -131,8 +132,36 @@ namespace betterhusbandry
                 if (Config == null)
                 {
                     Config = new betterhusbandryConfig();
-                    sapi.StoreModConfig(Config, ConfigFileName);
+                    Config.version = 2;
+                    newbetterhusbandryConfig newConfig = Config;
+                    sapi.StoreModConfig(newConfig, ConfigFileName);
                     sapi.Logger.Notification("[betterhusbandry] No config found, wrote defaults to {0}.", ConfigFileName);
+                }
+                else if(Config.version != 2)
+                {
+                    //We have an older version of the config file that needs migrated
+                    betterhusbandryConfig OldConfig = Config;
+                    Config = new betterhusbandryConfig();
+                    //Set Version
+                    Config.version = 2;
+                    //Migrate feed values
+                    Config.feedCeiling = OldConfig.FeedMod.Ceiling;
+                    Config.feedFloor = OldConfig.FeedMod.Floor;
+                    Config.feedGrowthPerDay = OldConfig.FeedMod.GrowthPerDay;
+                    Config.feedDecayPerDay = OldConfig.FeedMod.DecayPerDay;
+                    Config.feedGoodWeightThreshold = OldConfig.FeedMod.GoodWeightThreshold;
+                    Config.feedOkWeightThreshold = OldConfig.FeedMod.OkWeightThreshold;
+                    //Then migrate interact values
+                    Config.interactCeiling = OldConfig.InteractMod.Ceiling;
+                    Config.interactFloor = OldConfig.InteractMod.Floor;
+                    Config.interactGrowthPerDay = OldConfig.InteractMod.GrowthPerDay;
+                    Config.interactDecayPerDay = OldConfig.InteractMod.DecayPerDay;
+                    Config.interactGraceDays = OldConfig.InteractMod.GraceDays;
+                    Config.interactgenerationDecayMultiplier = OldConfig.InteractMod.generationDecayMultiplier;
+                    //Before saving to file, we want to convert it to the newer Config file, so we can deprecate the old config.
+                    newbetterhusbandryConfig newConfig = Config;
+                    sapi.StoreModConfig(newConfig, ConfigFileName);
+                    sapi.Logger.Notification("[betterhusbandry] Old Config Found at {0}, Migrated values to new config.", ConfigFileName);
                 }
             }
             catch (Exception e)
