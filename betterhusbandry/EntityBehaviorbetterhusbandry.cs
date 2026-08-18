@@ -167,27 +167,27 @@ namespace betterhusbandry
         /// </summary>
         public void ApplyDailyUpdate(double nowHours, betterhusbandryConfig config)
         {
-            FeedMod = ApplyFeedAxis(FeedMod, config.FeedMod);
-            InteractMod = ApplyAxis(InteractMod, LastInteractedHours, LastDecayHours, nowHours, entity.World.Calendar.HoursPerDay, config.InteractMod);
+            FeedMod = ApplyFeedAxis(FeedMod, config);
+            InteractMod = ApplyAxis(InteractMod, LastInteractedHours, LastDecayHours, nowHours, entity.World.Calendar.HoursPerDay, config);
             entity.WatchedAttributes.MarkPathDirty(RootKey);
 
             RecomputeEffectiveGeneration();
             LastUpdateHours = nowHours;
         }
 
-        float ApplyFeedAxis(float current, ModifierConfig cfg)
+        float ApplyFeedAxis(float current, betterhusbandryConfig cfg)
         {
             float weight = entity.WatchedAttributes.GetFloat("animalWeight", 1f);
 
             float updated;
-            if (weight >= 0.95f) updated = current + cfg.GrowthPerDay; //Creature has good weight, so we reward the player for feeding it.
+            if (weight >= 0.95f) updated = current + cfg.feedGrowthPerDay; //Creature has good weight, so we reward the player for feeding it.
             else if (weight >= 0.75f) updated = current; //Creature is underweight, but not starving, so we don't reward or punish the player for feeding it.
-            else updated = current - cfg.DecayPerDay; //Creature is starving, so we punish the player for not feeding it.
+            else updated = current - cfg.feedDecayPerDay; //Creature is starving, so we punish the player for not feeding it.
 
-            return GameMath.Clamp(updated, cfg.Floor, cfg.Ceiling);
+            return GameMath.Clamp(updated, cfg.feedFloor, cfg.feedCeiling);
         }
 
-        float ApplyAxis(float current, double lastActionHours, double lastDecayHours, double nowHours, double hoursPerDay, ModifierConfig cfg)
+        float ApplyAxis(float current, double lastActionHours, double lastDecayHours, double nowHours, double hoursPerDay, betterhusbandryConfig cfg)
         {
             double hoursSinceAction = double.IsNegativeInfinity(lastActionHours)
                 ? double.PositiveInfinity
@@ -196,14 +196,14 @@ namespace betterhusbandry
                 ? double.PositiveInfinity
                 : nowHours - lastDecayHours;
 
-            double graceHours = cfg.GraceDays * hoursPerDay;
+            double graceHours = cfg.interactGraceDays * hoursPerDay;
             int generation = entity.WatchedAttributes.GetInt("generation", 0);
-            double decayHours = generation * hoursPerDay * cfg.generationDecayMultiplier; // Effective generation is the number of days the animal can go without being interacted with before it starts to decay.
+            double decayHours = generation * hoursPerDay * cfg.interactgenerationDecayMultiplier; // Effective generation is the number of days the animal can go without being interacted with before it starts to decay.
 
             float updated;
             if (hoursSinceAction <= hoursPerDay)
             {
-                updated = current + cfg.GrowthPerDay;
+                updated = current + cfg.interactGrowthPerDay;
             }
             else if (hoursSinceAction <= hoursPerDay + graceHours + decayHours || hoursSinceLastDecay <= hoursPerDay + graceHours + decayHours)
             {
@@ -214,11 +214,11 @@ namespace betterhusbandry
             {
                 // Neglected beyond the grace window - decay. Can go negative,
                 // clamped at cfg.Floor.
-                updated = current - cfg.DecayPerDay;
+                updated = current - cfg.interactDecayPerDay;
                 RegisterDecay(nowHours); // Reset the last-decay timestamp so we don't keep decaying every day after this.
             }
 
-            return GameMath.Clamp(updated, cfg.Floor, cfg.Ceiling);
+            return GameMath.Clamp(updated, cfg.interactFloor, cfg.interactCeiling);
         }
 
         /// <summary>

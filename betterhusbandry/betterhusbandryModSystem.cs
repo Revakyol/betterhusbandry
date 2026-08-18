@@ -108,10 +108,10 @@ namespace betterhusbandry
 
             var packet = new CapsPacket
             {
-                InteractFloor = Config.InteractMod.Floor,
-                InteractCeiling = Config.InteractMod.Ceiling,
-                FeedFloor = Config.FeedMod.Floor,
-                FeedCeiling = Config.FeedMod.Ceiling
+                InteractFloor = Config.interactFloor,
+                InteractCeiling = Config.interactCeiling,
+                FeedFloor = Config.feedFloor,
+                FeedCeiling = Config.feedCeiling
             };
 
             if (onlyTo != null)
