@@ -133,15 +133,13 @@ namespace betterhusbandry
                 {
                     Config = new betterhusbandryConfig();
                     Config.version = 2;
-                    newbetterhusbandryConfig newConfig = Config;
-                    sapi.StoreModConfig(newConfig, ConfigFileName);
+                    sapi.StoreModConfig(Config, ConfigFileName);
                     sapi.Logger.Notification("[betterhusbandry] No config found, wrote defaults to {0}.", ConfigFileName);
                 }
                 else if(Config.version != 2)
                 {
-                    //We have an older version of the config file that needs migrated
-                    betterhusbandryConfig OldConfig = Config;
-                    Config = new betterhusbandryConfig();
+                    //We have an older version of the config file that needs migrated, load it into the old class structure
+                    oldbetterhusbandryConfig OldConfig = sapi.LoadModConfig<oldbetterhusbandryConfig>(ConfigFileName);
                     //Set Version
                     Config.version = 2;
                     //Migrate feed values
@@ -159,8 +157,7 @@ namespace betterhusbandry
                     Config.interactGraceDays = OldConfig.InteractMod.GraceDays;
                     Config.interactgenerationDecayMultiplier = OldConfig.InteractMod.generationDecayMultiplier;
                     //Before saving to file, we want to convert it to the newer Config file, so we can deprecate the old config.
-                    newbetterhusbandryConfig newConfig = Config;
-                    sapi.StoreModConfig(newConfig, ConfigFileName);
+                    sapi.StoreModConfig(Config, ConfigFileName);
                     sapi.Logger.Notification("[betterhusbandry] Old Config Found at {0}, Migrated values to new config.", ConfigFileName);
                 }
             }

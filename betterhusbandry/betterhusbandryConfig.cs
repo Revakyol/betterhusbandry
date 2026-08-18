@@ -116,6 +116,18 @@ namespace betterhusbandry
         }
     }
 
+    
+    public class oldbetterhusbandryConfig
+    {
+        public FeedModifierConfig FeedMod = new FeedModifierConfig();
+        public ModifierConfig InteractMod = new ModifierConfig();
+
+        public void Sanitize(ILogger logger)
+        {
+            FeedMod?.Sanitize(logger, nameof(FeedMod));
+            InteractMod?.Sanitize(logger, nameof(InteractMod));
+        }
+    }
     /// <summary>
     /// Root config. Deliberately does NOT expose the effective-generation
     /// floor/ceiling (0-10) - that range is hardcoded in
@@ -124,20 +136,7 @@ namespace betterhusbandry
     /// around it, and a bad edit there risks an out-of-range read in code
     /// this mod doesn't control.
     /// </summary>
-    public class betterhusbandryConfig : newbetterhusbandryConfig
-    {
-        public FeedModifierConfig FeedMod = new FeedModifierConfig();
-        public ModifierConfig InteractMod = new ModifierConfig();
-
-        public new void Sanitize(ILogger logger)
-        {
-            base.Sanitize(logger);
-            FeedMod?.Sanitize(logger, nameof(FeedMod));
-            InteractMod?.Sanitize(logger, nameof(InteractMod));
-        }
-    }
-
-    public class newbetterhusbandryConfig
+    public class betterhusbandryConfig
     {
         public int version;
         public float feedFloor = -3f;
