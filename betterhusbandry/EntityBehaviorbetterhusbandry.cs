@@ -134,15 +134,25 @@ namespace betterhusbandry
         {
             base.Initialize(properties, attributes);
 
-            // GiveBirth sets both of these on the newborn, in this order,
-            // before SpawnEntity triggers this Initialize call. Only
-            // fresh births carry "origin" == "reproduction"
-            // guard on bloodline being unset so this is a no-op on subseqwuent Initialize calls (e.g. on reload).
-            if (Bloodline == 0 && entity.Attributes.GetString("origin") == "reproduction")
+            // Only server needs to handle this
+            if(entity.Api.Side != EnumAppSide.Server) return;
+
+            // Initialize the Bloodline value for any entity that has not been initialized by the mod.
+            if (!Tree.HasAttribute("bloodline"))
             {
                 Bloodline = entity.WatchedAttributes.GetInt("generation", 0);
+                entity.WatchedAttributes.MarkPathDirty(RootKey);
             }
+            RecomputeEffectiveGeneration();
         }
+
+        public override void OnEntityDespawn(EntityDespawnData despawn)
+        {
+            entity.WatchedAttributes.SetInt("generation", Bloodline);
+            base.OnEntityDespawn(despawn);
+        }
+
+
 
         /// <summary>Call whenever the player successfully milks or pets the animal.</summary>
         public void RegisterInteract(double nowHours)
