@@ -6,6 +6,7 @@ using Vintagestory.API.Server;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Client;
 using ConfigLib;
+using Vintagestory.API.Common.Entities;
 
 
 namespace betterhusbandry
@@ -71,6 +72,30 @@ namespace betterhusbandry
             base.StartServerSide(api);
             sapi = api;
 
+            var parsers = api.ChatCommands.Parsers;
+
+            api.ChatCommands.Create("betterhusbandry")
+                .WithDescription("Debug/Admin commands for the Better Husbandry mod")
+                .RequiresPrivilege(Privilege.controlserver)
+                .BeginSubCommand("setattr")
+                    .WithArgs(
+                        parsers.Entities("target"),
+                        parsers.Word("attr", new[] {"bloodline", "feed", "interact"}),
+                        parsers.Int("value")
+                    )
+                    .HandleWith(OnSetAttr)
+                    .WithDescription("Sets the given Better Husbandry Attribute on a given entity")
+                .EndSubCommand()
+                .BeginSubCommand("attr")
+                    .WithArgs(
+                        parsers.Entities("target"),
+                        parsers.OptionalWord("attr")
+                    )
+                    .HandleWith(OnGetAttr)
+                    .WithDescription("Shows the given Better Husbandry Attribute on a given entity. If no Attributes are given, shows them all.")
+                .EndSubCommand()
+                .WithAlias("bh");
+
             LoadConfig();
 
             serverChannel = api.Network.GetChannel("betterhusbandry");
@@ -100,6 +125,64 @@ namespace betterhusbandry
 
                 entity.WatchedAttributes.SetInt("generation", behavior.Bloodline);
             }
+        }
+
+        private TextCommandResult OnSetAttr(TextCommandCallingArgs args)
+        {
+            var entities = (Entity[])args[0];
+            string attr = (string)args[1];
+            int value = (int)args[2];
+
+            if(entities.Length == 0) return TextCommandResult.Error("No Entities Matched");
+            int affected = 0;
+            foreach (var entity in entities)
+            {
+                var bh = entity.GetBehavior<EntityBehaviorbetterhusbandry>();
+                if (bh == null) continue;
+
+                switch (attr)
+                {
+                    case "bloodline": bh.Bloodline = value; break;
+                    case "feed": bh.FeedMod = value; break;
+                    case "interact": bh.InteractMod = value; break;
+                    default: return TextCommandResult.Error("attr must be one of: bloodline, feed, interact");
+                }
+                affected++;
+                entity.WatchedAttributes.MarkPathDirty("betterhusbandry");
+                bh.RecomputeEffectiveGeneration();
+            }
+
+            return TextCommandResult.Success($"Set {attr} = {value} on {affected} entit{(affected == 1 ? "y" : "ies")}.");
+        }
+
+        private TextCommandResult OnGetAttr(TextCommandCallingArgs args)
+        {
+            
+            var entities = (Entity[])args[0];
+            bool attrGiven = !args.Parsers[1].IsMissing;
+            string attr = attrGiven ? (string)args[1] : null;
+            if (attr != null && attr != "bloodline" && attr != "feed" && attr != "interact")
+                return TextCommandResult.Error("attr must be one of: bloodline, feed, interact");
+
+
+            if (entities.Length == 0) return TextCommandResult.Error("No entities matched.");
+            
+            string output = "";
+            foreach (var entity in entities)
+            {
+                var bh = entity.GetBehavior<EntityBehaviorbetterhusbandry>();
+                if (bh == null) continue;
+                output += $"Entity {entity.EntityId}:";
+                switch(attr)
+                {
+                    case null: output += $"  bloodline: {bh.Bloodline},  feed: {bh.FeedMod},  interact: {bh.InteractMod}"; break;
+                    case "bloodline": output += $"  bloodline: {bh.Bloodline}"; break;
+                    case "feed": output += $"  feed: {bh.FeedMod}"; break;
+                    case "interact": output += $"  interact: {bh.InteractMod}"; break;
+                }
+            }
+
+            return TextCommandResult.Success(output);
         }
 
         void OnCapsReceived(CapsPacket packet)
