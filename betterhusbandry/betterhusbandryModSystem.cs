@@ -68,6 +68,7 @@ namespace betterhusbandry
 
         public override void StartServerSide(ICoreServerAPI api)
         {
+            base.StartServerSide(api);
             sapi = api;
 
             LoadConfig();
@@ -76,6 +77,7 @@ namespace betterhusbandry
             api.Event.PlayerJoin += OnPlayerJoin;
 
             api.Event.RegisterGameTickListener(OnConfigReloadTick, (int)(ConfigReloadIntervalSeconds * 1000));
+            api.Event.ServerRunPhase(EnumServerRunPhase.Shutdown, OnServerShutdown);
 
             RegisterDailyCareTickListener();
 
@@ -87,6 +89,17 @@ namespace betterhusbandry
         {
             clientChannel = api.Network.GetChannel("betterhusbandry");
             clientChannel.SetMessageHandler<CapsPacket>(OnCapsReceived);
+        }
+
+        private void OnServerShutdown()
+        {
+            foreach (var entity in sapi.World.LoadedEntities.Values)
+            {
+                var behavior = entity.GetBehavior<EntityBehaviorbetterhusbandry>();
+                if (behavior == null) continue;
+
+                entity.WatchedAttributes.SetInt("generation", behavior.Bloodline);
+            }
         }
 
         void OnCapsReceived(CapsPacket packet)

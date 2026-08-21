@@ -146,6 +146,14 @@ namespace betterhusbandry
             RecomputeEffectiveGeneration();
         }
 
+        public override void OnEntityDespawn(EntityDespawnData despawn)
+        {
+            entity.WatchedAttributes.SetInt("generation", Bloodline);
+            base.OnEntityDespawn(despawn);
+        }
+
+
+
         /// <summary>Call whenever the player successfully milks or pets the animal.</summary>
         public void RegisterInteract(double nowHours)
         {
