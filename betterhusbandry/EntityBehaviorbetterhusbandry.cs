@@ -141,6 +141,7 @@ namespace betterhusbandry
             if (Bloodline == 0 && entity.Attributes.GetString("origin") == "reproduction")
             {
                 Bloodline = entity.WatchedAttributes.GetInt("generation", 0);
+                entity.WatchedAttributes.MarkPathDirty(RootKey);
             }
         }
 
