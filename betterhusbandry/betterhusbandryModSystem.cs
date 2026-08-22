@@ -108,6 +108,24 @@ namespace betterhusbandry
 
             harmony = new Harmony("betterhusbandry");
             harmony.PatchAll();
+
+            if (IsShearLibPresent())
+            {
+                var shearLibAsm = AppDomain.CurrentDomain.GetAssemblies()
+                    .First(a => a.GetName().Name == "vs_shearlib");
+                var targetType = shearLibAsm.GetType("ShearLib.EntityBehaviorShearable");
+                var targetMethod = AccessTools.Method(targetType, "DoShear");
+
+                var postfix = new HarmonyMethod(typeof(HarmonyPatches.Patch_OnShear), nameof(HarmonyPatches.Patch_OnShear.Postfix));
+                harmony.Patch(targetMethod, prefix: postfix);
+            }
+        }
+
+        // For checking if the ShearLib is present, so we can patch its felling method for bonus drops
+        static bool IsShearLibPresent()
+        {
+            return AppDomain.CurrentDomain.GetAssemblies()
+                .Any(a => a.GetName().Name == "vs_shearlib");
         }
 
         public override void StartClientSide(ICoreClientAPI api)

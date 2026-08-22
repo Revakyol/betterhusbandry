@@ -102,6 +102,18 @@ namespace betterhusbandry
                 ___entity.WatchedAttributes.SetInt("generation", savedGeneration);
             }
         }
+
+        public static class Patch_OnShear
+        {
+            public static void Postfix(ItemSlot slot, Entity byEntity, Entity ___entity)
+            {
+                if(!(byEntity is EntityPlayer)) return;
+                if(___entity.World.Side != EnumAppSide.Server) return;
+
+                var behavior = ___entity.GetBehavior<EntityBehaviorbetterhusbandry>();
+                behavior?.RegisterInteract(byEntity.World.Calendar.TotalHours);
+            }
+        }
     }
     [ProtoContract]
     public class CapsPacket
