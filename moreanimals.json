@@ -1,0 +1,114 @@
+[
+  {  
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/capercaillie",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {  
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/capercaillie",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/capercaillie-chick",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/capercaillie-chick",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/goldenpheasant",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/goldenpheasant",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/goldenpheasant-chick",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/goldenpheasant-chick",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+   "file": "moreanimals:entities/pheasant",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+   {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+   "file": "moreanimals:entities/pheasant",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/pheasant-chick",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/pheasant-chick",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/wildturkey",
+    "dependsOn": [{"modid":"moreanimals"}]
+ },
+ {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/wildturkey",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/wildturkey-chick",
+    "dependsOn": [{"modid":"moreanimals"}]
+  },
+	{
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "moreanimals:entities/wildturkey-chick",
+    "dependsOn": [{"modid":"moreanimals"}]
+  }
+]
